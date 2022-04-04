@@ -7,6 +7,12 @@ app.get('/', function(req, res) {
   });
 });
 
+app.get('/health-check', function(req, res){
+  res.send({
+    "Output": "Prueba otro endpoint"
+  });
+});
+
 app.post('/', function(req, res) {
   res.send({
     "Output": "Hello World!"
