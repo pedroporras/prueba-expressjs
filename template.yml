@@ -48,6 +48,16 @@ Resources:
           Properties:
             Path: /
             Method: post
+        HCLiveness:
+          Type: Api
+          Properties:
+            Path: /healthcheck/liveness
+            Method: get
+        HCReadiness:
+          Type: Api
+          Properties:
+            Path: /healthcheck/readiness
+            Method: get
   LambdaExecutionRole:
     Description: Creating service role in IAM for AWS Lambda
     Type: AWS::IAM::Role
